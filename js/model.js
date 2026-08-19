@@ -5,10 +5,10 @@
 
 const Model = {
 
-  githubUser: "Omicron69",
+  githubUser: "BrandonMercadoPerez",
 
   // Where the contact form delivers (via formsubmit.co relay)
-  contactEmail: "mez.rahman777@gmail.com",
+  contactEmail: "Brandon_mercado@ymail.com",
 
   // App state (read/written by the Controller, displayed by the View)
   state: {
@@ -21,72 +21,35 @@ const Model = {
   // ---- Featured projects (hand-written, shown above the GitHub feed) ----
   featured: [
     {
-      title: "BSL Fingerspelling: “Hands”",
-      tag: "Live App", color: "#3dff6e", live: true,
-      url: "https://bslgame.co.uk/", cta: "Play at bslgame.co.uk →",
-      img: "assets/projects/bsl.png",
-      desc: "A game that teaches you the BSL alphabet using nothing but your webcam. Built with React, Node.js, TensorFlow.js and MediaPipe hand tracking. This was my final year project and it scored an A+ at 87/100.",
-    },
-    {
-      title: "Steam Review Sentiment with Transformers",
-      tag: "NLP", color: "#e60012",
-      url: "https://github.com/Omicron69/Granular-Sentiment-Pipeline-Class-Weighted-Transformers-for-Steam-Reviews",
+      title: "Payroll Data Processing App",
+      tag: "C++", color: "#f34b7d",
+      url: "https://github.com/BrandonMercadoPerez/salary-processing",
       cta: "View on GitHub →",
-      img: "assets/projects/steam.png",
-      desc: "Fine-tuned DistilBERT, BERTweet and RoBERTa to sort Steam reviews into a custom six-class sentiment taxonomy, with class weighting to handle the imbalance. RoBERTa came out on top at 88.2% F1.",
+      img: "assets/projects/salary-processing.png",
+      desc: "A C++ console application that parses unstructured payroll text files, normalizes inconsistent time formats, applies multiple pay-grade rules, and generates formatted departmental payroll summaries. Built and version-controlled from the ground up on GitHub.",
     },
     {
-      title: "DownloadGuard",
-      tag: "Security", color: "#f1e05a",
-      url: "https://github.com/Omicron69/DownloadGuard", cta: "View on GitHub →",
-      img: "assets/projects/downloadguard.png",
-      desc: "A Chrome extension that protects everyday users in real time. It watches for malicious downloads, phishing emails, deceptive links and QR code scams, all layered into one Manifest V3 extension.",
-    },
-    {
-      title: "Medical Image Classification",
-      tag: "Deep Learning", color: "#3178c6",
-      url: "https://github.com/Omicron69/organsmnist-cnn-classification", cta: "View on GitHub →",
-      img: "assets/projects/medcnn.png",
-      desc: "Classifying organs in CT scans, from a baseline dense net to five custom CNNs to fine-tuned ResNet50 and EfficientNetB0, reaching 79% test accuracy on 25,000+ OrganSMNIST images.",
+      title: "UTD Market Optimization Project",
+      tag: "Operations", color: "#e60012",
+      url: "https://github.com/BrandonMercadoPerez", cta: "View GitHub profile →",
+      img: "assets/projects/utd-market.png",
+      desc: "Led a summer-long project establishing cost centers, PAR levels, POS optimization, and inventory infrastructure across campus marketplace locations for Chartwells Higher Education Dining Services — completed ahead of the Fall 2025 opening, and led to an expanded role as Marketplace Supervisor.",
     },
   ],
 
   // Repos already shown in "featured" get hidden from the GitHub feed
   featuredRepoNames: [
-    "BritishFingerSpellingAI",
-    "Granular-Sentiment-Pipeline-Class-Weighted-Transformers-for-Steam-Reviews",
-    "DownloadGuard",
-    "organsmnist-cnn-classification",
+    "salary-processing",
   ],
 
   // Shown if the GitHub API can't be reached
-  fallbackRepos: [
-    {
-      name: "crime-analysis-montgomery-county", language: "Jupyter Notebook", stargazers_count: 0,
-      html_url: "https://github.com/Omicron69/crime-analysis-montgomery-county",
-      description: "Ten years of Montgomery County crime data, taken from a messy 90 MB government CSV to ten answered analytical questions, geospatial hotspot maps and a district safety ranking.",
-    },
-    {
-      name: "asthma-worsening-prediction", language: "MATLAB", stargazers_count: 0,
-      html_url: "https://github.com/Omicron69/asthma-worsening-prediction",
-      description: "Predicting worsening asthma symptoms from NHS primary-care data with SQL and MATLAB, following CRISP-DM. Compares four models on a heavily imbalanced clinical dataset.",
-    },
-    {
-      name: "Chronic-Kideney-Disease-Analyzer", language: "PHP", stargazers_count: 0,
-      html_url: "https://github.com/Omicron69/Chronic-Kideney-Disease-Analyzer",
-      description: "A healthcare tracking web app. I led the front-end and requirements analysis in a multidisciplinary team, and our solution improved patient diagnostics by 25%.",
-    },
-    {
-      name: "MSc-Washington-Crime-Analysis-with-Pandas", language: "Jupyter Notebook", stargazers_count: 0,
-      html_url: "https://github.com/Omicron69/MSc-Washington-Crime-Analysis-with-Pandas",
-      description: "Crime trend analysis of Washington D.C. public data. Reproducible Pandas notebooks with visual summaries written for people who do not code.",
-    },
-  ],
+  // (add more entries here as you create more repos)
+  fallbackRepos: [],
 
   // Optional thumbnail overrides: repo name → image path.
   // Anything not listed is looked up at assets/projects/<RepoName>.png
   projectImages: {
-    // "DownloadGuard": "assets/projects/downloadguard.png",
+    // "salary-processing": "assets/projects/salary-processing.png",
   },
 
   langColors: {
@@ -97,23 +60,21 @@ const Model = {
 
   // ---- Skills screen ----
   skills: [
-    { group: "AI · ML · Data Science", items: [
-      ["Python · pandas · NumPy", 92], ["TensorFlow / Keras · PyTorch", 88],
-      ["scikit-learn · XGBoost", 86], ["CNNs & Transfer Learning", 85],
-      ["NLP & Transformers", 82], ["Computer Vision · MediaPipe", 86],
+    { group: "Programming & Data", items: [
+      ["C++", 65], ["Python", 55], ["SQL", 55],
     ]},
-    { group: "Web & Full-Stack", items: [
-      ["JavaScript / TypeScript", 86], ["React · React Native · Next.js", 84],
-      ["Node.js · REST APIs", 80], ["TensorFlow.js (in-browser ML)", 84],
-      ["PHP · SQL · PostgreSQL", 74], ["UX Design · Figma · Adobe XD", 82],
+    { group: "Tools & Platforms", items: [
+      ["GitHub", 70], ["Visual Studio Code", 75], ["Visual Studio", 65],
     ]},
-    { group: "Cloud & Engineering", items: [
-      ["Git & GitHub", 88], ["AWS · Azure · GCP", 74],
-      ["Docker · Firebase", 76], ["Agile · PRINCE2 Agile", 80],
-      ["Tableau · Power BI", 72], ["Bash · PowerShell", 75],
+    { group: "Productivity & Analytics", items: [
+      ["Microsoft Excel", 88], ["Microsoft Word", 85], ["Microsoft PowerPoint", 82],
     ]},
-    { group: "Spoken Languages", items: [
-      ["English · Bengali · Hindi · Urdu", 100], ["Japanese (JLPT N4)", 62], ["Mandarin", 30],
+    { group: "Leadership & Operations", items: [
+      ["Team Training & Supervision", 92], ["Inventory & Vendor Management", 88],
+      ["Project Leadership", 85], ["Construction & Skilled Trades", 78],
+    ]},
+    { group: "Languages", items: [
+      ["English", 100], ["Spanish", 95],
     ]},
   ],
 
